@@ -1,72 +1,57 @@
 public class Main {
     public static void main(String[] args) {
         //task 1
-        int a = 100;
-        byte b = -5;
-        short c = -100;
-        long d = 425_00L;
-        float e = 58f;
-        double f = 52.25987233;
-        System.out.println("Значение переменной a с типом int равно " + a);
-        System.out.println("Значение переменной b с типом byte равно " + b);
-        System.out.println("Значение переменной c с типом short равно " + c);
-        System.out.println("Значение переменной d с типом long равно " + d);
-        System.out.println("Значение переменной e с типом float равно " + e);
-        System.out.println("Значение переменной f с типом double равно " + f);
+        int age = 20;
+        System.out.print("Если возраст человека равен ");
+        if (age >= 18)
+            System.out.println(age + ", то он совершеннолетний");
+        else System.out.println(age + ", то он не достиг совершеннолетия, нужно немного подождать");
+
+        //task 2
+        int temperature = 9;
+        if (temperature <= 5)
+            System.out.println("На улице " + temperature + " градусов, нужно надеть шапку");
+        else System.out.println("На улице " + temperature + " градусов, можно идти без шапки");
 
         //task 3
-        byte studentsLP = 23;
-        short studentsAS = 27;
-        int studentsEA = 30;
-        long totalSheets = 480L;
-        System.out.println("На каждого ученика рассчитано "
-                + totalSheets / (studentsLP+studentsAS+studentsEA) +" листов бумаги");
+        int speed = 70;
+        if (speed > 60)
+            System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
+        else System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
 
         //task 4
-        int perMinute = 16 / 2;
-        System.out.println("За 20 минут машина произвела " + 20 * perMinute + " штук бутылок");
-        System.out.println("За сутки машина произвела " + 60 * perMinute * 24 + " штук бутылок");
-        System.out.println("За 3 дня машина произвела " + 60 * perMinute * 24 * 3 + " штук бутылок");
-        System.out.println("За 1 месяц машина произвела " + 60 * perMinute * 24 * 30 + " штук бутылок");
+        int humanAge = 25;
+        System.out.print("Если возраст человека равен ");
+        if (humanAge >= 2 && humanAge < 6)
+            System.out.println(humanAge + ", то ему нужно ходить в детский сад");
+        else if (humanAge < 18)
+            System.out.println(humanAge + ", то ему нужно ходить в школу");
+        else if (humanAge < 24)
+            System.out.println(humanAge + ", то его место в университете");
+        else System.out.println(humanAge + ", то ему пора ходить на работу");
 
         //task 5
-        int total = 120;
-        int whitePerClass = 2;
-        int brownPerClass = 4;
-        int classes = total / (whitePerClass + brownPerClass);
-        System.out.println("В школе, где " + classes +
-                " классов, нужно " + whitePerClass * classes + " банок белой краски и "
-                + brownPerClass * classes + " банок коричневой краски");
+        int childAge = 4;
+        System.out.print("Если возраст ребенка равен ");
+        if (childAge < 5)
+            System.out.println(childAge + ", то ему нельзя кататься на аттракционе");
+        else if (childAge < 14)
+            System.out.println(childAge + ", то он может кататься только в сопровождении взрослого");
+        else System.out.println(childAge + ", то он может кататься без сопровождения взрослого");
 
         //task 6
-        int bananas = 5 * 80;
-        int milk = 200 / 100 * 105;
-        int icecream = 2 *100;
-        int eggs = 4 * 70;
-        System.out.println("в граммах: " + (bananas+milk+icecream+eggs));
-        System.out.println("в килограммах: " + (double)(bananas+milk+icecream+eggs) / 1000);
+        int capacity = 120;
+        int occupied = 120;
+        if (occupied < 60) System.out.println("Место есть. Сидячее.");
+        else if (occupied < capacity) System.out.println("Место есть. Только стоячее.");
+        else System.out.println("Мест нет");
 
         //task 7
-        int goal = 7;
-        int max = (int) ( goal / 0.25);
-        int min = (int) ( goal / 0.5);
-        int average = (int) ( goal / ((0.5+0.25)/2));
-        System.out.println(max);
-        System.out.println(min);
-        System.out.println(average);
-
-        //task 8
-        int masha = 67760;
-        int denis = 83690;
-        int kristina = 76230;
-        double index = 10;
-        System.out.println("Маша теперь получает " + masha *(100+index)/100 + " рублей." +
-                " Годовой доход вырос на " + (int)(12*masha*((100+index)/100-1)) + " рублей");
-        System.out.println("Денис теперь получает " + denis *(100+index)/100 + " рублей." +
-                " Годовой доход вырос на " + (int)(12*denis*((100+index)/100-1)) + " рублей");
-        System.out.println("Кристина теперь получает " + kristina *(100+index)/100 + " рублей." +
-                " Годовой доход вырос на " + (int)(12*kristina*((100+index)/100-1)) + " рублей");
-
-
+        int one = 2;
+        int two = 5;
+        int three = 4;
+        if (one > two && one > three) System.out.println(one + " :большее");
+        else if (two > one && two > three) System.out.println(two + " :большее");
+        else System.out.println(three + " :большее");
     }
 }
