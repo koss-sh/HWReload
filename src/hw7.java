@@ -9,7 +9,6 @@ public class hw7 {
         task7();
         task8();
     }
-
     public static void task1() {
         System.out.println("task 1");
         int deposit = 15000;
