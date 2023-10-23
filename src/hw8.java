@@ -23,12 +23,12 @@ public class hw8 {
             System.out.print(arr2[i] + ", ");
         }
         for (int i = 0; i < arr3.length; i++) {
-            if (i == arr3.length - 1) {
-                System.out.println(arr3[i]);
-                break;
+            System.out.print(arr3[i]);
+            if (i!=arr3.length-1){
+                System.out.print(", ");
             }
-            System.out.print(arr3[i] + ", ");
         }
+        System.out.println();
 
         System.out.println("task 3");
         for (int i = arr1.length - 1; i >= 0; i--) {
@@ -55,7 +55,7 @@ public class hw8 {
         System.out.println("task 4");
         for (int i = 0; i < arr1.length; i++) {
             if (arr1[i] % 2 == 1) {
-                arr1[i] += 1;
+                arr1[i] ++;
             }
         }
         System.out.println(Arrays.toString(arr1));
