@@ -79,9 +79,9 @@ public class hw6 {
         int deposit = 29000;
         double sum = 0;
         double percentage = 12;
-        for (int i = 1; i <= 12; i++) {
-            sum = (int) (sum * (1 + (percentage/100)/12)) + deposit;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum + " рублей");
+        for (int month = 1; month <= 12; month++) {
+            sum = sum * (1 + (percentage/100)/12) + deposit;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей%n", month, sum);
         }
     }
     public static void task10() {
