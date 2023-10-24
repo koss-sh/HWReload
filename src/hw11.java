@@ -2,18 +2,22 @@ import java.time.LocalDate;
 
 public class hw11 {
     public static void main(String[] args) {
-        checkYear(2024);
+        printYear(2024);
         suggestCorrectInstall(0, 2023);
         printDeliveryDays(105);
     }
 
     //task 1
-    static void checkYear(int year) {
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println(year + " год — високосный год»");
+    static void printYear(int year) {
+        boolean leapYear = isLeapYear(year);
+        if (leapYear) {
+            System.out.println(year + " год — високосный год");
         } else {
-            System.out.println(year + " год — невисокосный год»");
+            System.out.println(year + " год — невисокосный год");
         }
+    }
+    static boolean isLeapYear(int year) {
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 
     //task 2
@@ -25,7 +29,7 @@ public class hw11 {
     }
 
     //task 3
-    public static int requireDeliveryDays(int deliveryDistance) {
+    public static int defineDeliveryDays(int deliveryDistance) {
         if (deliveryDistance < 20) {
             return 1;
         } else if (deliveryDistance < 60) {
@@ -38,20 +42,11 @@ public class hw11 {
     }
 
     public static void printDeliveryDays(int distance) {
-        int deliveryDays = requireDeliveryDays(distance);
-        switch (deliveryDays) {
-            case 1:
-                System.out.println("Потребуется дней: 1");
-                break;
-            case 2:
-                System.out.println("Потребуется дней: 2");
-                break;
-            case 3:
-                System.out.println("Потребуется дней: 3");
-                break;
-            default:
-                System.out.println("Доставки нет");
-                break;
+        int deliveryDays = defineDeliveryDays(distance);
+        if (deliveryDays == -1) {
+            System.out.println("Доставки нет");
+        } else {
+            System.out.println("Потребуется дней: " + deliveryDays);
         }
     }
 }
