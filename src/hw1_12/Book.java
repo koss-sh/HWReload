@@ -1,4 +1,4 @@
-package hw12;
+package hw1_12;
 
 import java.util.Objects;
 

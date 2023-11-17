@@ -1,4 +1,6 @@
-public class hw4 {
+package hw1_1____1_11;
+
+public class hw1_4 {
     public static void main(String[] args) {
         System.out.println("task 1");
         int age = 20;

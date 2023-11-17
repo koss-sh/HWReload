@@ -1,4 +1,6 @@
-public class hw6 {
+package hw1_1____1_11;
+
+public class hw1_6 {
     public static void main(String[] args) {
         task1();
         task2();

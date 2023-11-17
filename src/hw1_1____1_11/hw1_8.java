@@ -1,6 +1,8 @@
+package hw1_1____1_11;
+
 import java.util.Arrays;
 
-public class hw8 {
+public class hw1_8 {
     public static void main(String[] args) {
         //task1
         int[] arr1 = new int[]{1, 2, 3};

@@ -1,4 +1,6 @@
-public class hw10 {
+package hw1_1____1_11;
+
+public class hw1_10 {
     public static void main(String[] args) {
 
         System.out.println("task 1");

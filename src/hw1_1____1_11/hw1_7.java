@@ -1,6 +1,8 @@
+package hw1_1____1_11;
+
 import java.time.LocalDate;
 
-public class hw7 {
+public class hw1_7 {
     public static void main(String[] args) {
         task1();
         task2();

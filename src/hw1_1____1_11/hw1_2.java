@@ -1,4 +1,6 @@
-public class hw2 {
+package hw1_1____1_11;
+
+public class hw1_2 {
     public static void main(String[] args) {
         //task 1
         var dog = 8.0;

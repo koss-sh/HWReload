@@ -1,6 +1,8 @@
+package hw1_1____1_11;
+
 import java.time.LocalDate;
 
-public class hw11 {
+public class hw1_11 {
     public static void main(String[] args) {
         printYear(2024);
         suggestCorrectInstall(0, 2023);

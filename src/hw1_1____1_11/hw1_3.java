@@ -1,4 +1,6 @@
-public class hw3 {
+package hw1_1____1_11;
+
+public class hw1_3 {
     public static void main(String[] args) {
         //task 1
         int a = 100;
