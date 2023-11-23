@@ -71,4 +71,14 @@ public class Main {
         changePerson2(person2);
         System.out.println(person2);
     }
+    public static class Person{
+        String name;
+        String surname;
+
+        @Override
+        public String toString() {
+            return name +
+                    " " + surname;
+        }
+    }
 }
