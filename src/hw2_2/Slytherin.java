@@ -1,6 +1,6 @@
 package hw2_2;
 
-public class Slytherin extends Hogwarts{
+public class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -57,11 +57,29 @@ public class Slytherin extends Hogwarts{
         this.powerthirst = powerthirst;
     }
 
+    private int ability() {
+        return cunning + determination + ambition + resoursefulness + powerthirst;
+    }
+
+    public void compareSlytherins(Slytherin slytherin) {
+        int ability1 = ability();
+        int ability2 = slytherin.ability();
+        if (ability1 > ability2) {
+            System.out.printf("%s is better than %s: %d vs %d%n",
+                    getName(), slytherin.getName(), ability1, ability2);
+        } else if (ability1 < ability2) {
+            System.out.printf("%s is better than %s: %d vs %d%n",
+                    slytherin.getName(), getName(), ability2, ability1);
+        } else {
+            System.out.printf("%s and %s are equal: %d vs %d%n",
+                    getName(), slytherin.getName(), ability2, ability1);
+        }
+    }
+
     @Override
     public String toString() {
-        return getName() + "   " + "magic: " + getMagic() + ", transgression: " + getTransgression()
-                + ", cunning: " + getCunning() + ", determination: " + getDetermination()
-                + ", ambition: " + getAmbition() + ", resoursefulness: " + getResoursefulness()
-                + ", powerthirst: " + getPowerthirst();
+        return super.toString() + ", cunning: " + cunning + ", determination: " + determination
+                + ", ambition: " + ambition + ", resoursefulness: " + resoursefulness
+                + ", powerthirst: " + powerthirst;
     }
 }

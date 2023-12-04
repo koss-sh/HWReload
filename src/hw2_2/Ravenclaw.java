@@ -47,12 +47,29 @@ public class Ravenclaw extends Hogwarts {
         this.creativity = creativity;
     }
 
+    private int ability() {
+        return intellect + wisdom + wittiness + creativity;
+    }
+
+    public void compareRawenclaws(Ravenclaw ravenclaw) {
+        int ability1 = ability();
+        int ability2 = ravenclaw.ability();
+        if (ability1 > ability2) {
+            System.out.printf("%s is better than %s: %d vs %d%n",
+                    getName(), ravenclaw.getName(), ability1, ability2);
+        } else if (ability1 < ability2) {
+            System.out.printf("%s is better than %s: %d vs %d%n",
+                    ravenclaw.getName(), getName(), ability2, ability1);
+        } else {
+            System.out.printf("%s and %s are equal: %d vs %d%n",
+                    getName(), ravenclaw.getName(), ability2, ability1);
+        }
+    }
 
 
     @Override
     public String toString() {
-        return getName() + "   " + "magic: " + getMagic() + ", transgression: " + getTransgression()
-                + ", intellect: " + getIntellect() + ", wisdom: " + getWisdom()
-                + ", wittiness: " + getWittiness() + ", creativity: " + getCreativity();
+        return super.toString() + ", intellect: " + intellect + ", wisdom: " + wisdom
+                + ", wittiness: " + wittiness + ", creativity: " + creativity;
     }
 }

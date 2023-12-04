@@ -36,10 +36,28 @@ public class Gryffindor extends Hogwarts {
         this.courage = courage;
     }
 
+    private int ability() {
+        return nobility + honor + courage;
+    }
+
+    public void compareGryffindors(Gryffindor gryffindor){
+        int ability1 = ability();
+        int ability2 = gryffindor.ability();
+        if (ability1 > ability2){
+            System.out.printf("%s is better than %s: %d vs %d%n",
+                    getName(), gryffindor.getName(), ability1, ability2);
+        } else if (ability1 < ability2) {
+            System.out.printf("%s is better than %s: %d vs %d%n",
+                    gryffindor.getName(), getName(), ability2, ability1);
+        } else {
+            System.out.printf("%s and %s are equal: %d vs %d%n",
+                    getName(), gryffindor.getName(), ability2, ability1);
+        }
+    }
+
     @Override
     public String toString() {
-        return getName() + "   " + "magic: " + getMagic() + ", transgression: " + getTransgression()
-                + ", nobility: " + getNobility() + ", honor: " + getHonor() + ", courage: " + getCourage();
+        return super.toString() + ", nobility: " + nobility + ", honor: " + honor + ", courage: " + courage;
     }
 
 }

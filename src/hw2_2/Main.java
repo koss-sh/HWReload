@@ -49,8 +49,12 @@ public class Main {
                 random.nextInt(0, 101), random.nextInt(0, 101),
                 random.nextInt(0, 101));
 
-        HogwartsBook.printStudent(marcusBelby);
+        HogwartsBook.printStudent(harryPotter);
+        harryPotter.print();
+        grahamMontague.print();
         HogwartsBook.compare2Ravenclaws(marcusBelby, padmaPatil);
         HogwartsBook.compareStudentsByMagicAndTransgression(harryPotter, marcusBelby);
+        marcusBelby.compareRawenclaws(padmaPatil);
+        harryPotter.compareHogwarts(marcusBelby);
     }
 }
