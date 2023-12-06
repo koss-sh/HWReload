@@ -15,7 +15,7 @@ public class ServiceStation {
             checkVehicle(car);
             car.checkEngine();
         }
-    }
+   }
 
     public void check(Truck truck) {
         if (truck != null) {
